@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="card">
+    <h1>password generator</h1>
+    <p class="sub">makes random passwords so you don't have to think</p>
+
+    <div class="output-area">
+      <input type="text" id="passwordDisplay" readonly placeholder="click generate...">
+      <button id="copyBtn" title="copy">📋</button>
+    </div>
+
+    <div class="strength">
+      <div class="strength-bar">
+        <span id="strengthFill"></span>
+      </div>
+      <span class="strength-label" id="strengthLabel">none</span>
+    </div>
+
+    <div class="controls">
+      <div class="row">
+        <label>length</label>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <input type="range" id="lengthSlider" min="6" max="64" value="16">
+          <input type="number" id="lengthNum" min="6" max="64" value="16">
+        </div>
+      </div>
+
+      <div class="checkboxes">
+        <label><input type="checkbox" id="chkUpper" checked> ABC</label>
+        <label><input type="checkbox" id="chkLower" checked> abc</label>
+        <label><input type="checkbox" id="chkNumber" checked> 123</label>
+        <label><input type="checkbox" id="chkSymbol"> #$&</label>
+      </div>
+
+      <button class="generate-btn" id="generateBtn">generate password</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
