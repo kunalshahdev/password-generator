@@ -9,7 +9,10 @@
 <body>
 
   <div class="card">
-    <h1>password generator</h1>
+    <div class="card-header">
+      <h1>password generator</h1>
+      <button id="themeToggle" title="toggle dark mode">🌙</button>
+    </div>
     <p class="sub">makes random passwords so you don't have to think</p>
 
     <div class="output-area">
@@ -38,9 +41,15 @@
         <label><input type="checkbox" id="chkLower" checked> abc</label>
         <label><input type="checkbox" id="chkNumber" checked> 123</label>
         <label><input type="checkbox" id="chkSymbol"> #$&</label>
+        <label><input type="checkbox" id="chkAutoCopy"> auto-copy</label>
       </div>
 
       <button class="generate-btn" id="generateBtn">generate password</button>
+    </div>
+
+    <div class="history" id="historySection">
+      <p class="history-title">recent passwords</p>
+      <div class="history-list" id="historyList"></div>
     </div>
   </div>
 
